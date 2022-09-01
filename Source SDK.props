@@ -1,8 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
-  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Label="UserMacros">
+    <SOURCE_SDK_2013>$(SOLUTION_DIR)..\source-sdk-2013\</SOURCE_SDK_2013>
+  </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />
-  <ItemGroup />
+  <ItemGroup>
+    <BuildMacro Include="SOURCE_SDK_2013">
+      <Value>$(SOURCE_SDK_2013)</Value>
+    </BuildMacro>
+  </ItemGroup>
 </Project>
