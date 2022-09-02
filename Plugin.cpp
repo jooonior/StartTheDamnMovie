@@ -7,7 +7,7 @@ Plugin::~Plugin() {}
 
 bool Plugin::Load(CreateInterfaceFn interfaceFactory, CreateInterfaceFn gameServerFactory)
 {
-	ConMsg(PLUGIN_NAME " loaded.\n");
+	ConColorMsg(Color(0, 255, 0, 255), PLUGIN_PREFIX "Plugin loaded.\n");
 	return true;
 }
 

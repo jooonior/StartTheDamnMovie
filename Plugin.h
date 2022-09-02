@@ -2,6 +2,7 @@
 #include "cbase.h"
 
 #define PLUGIN_NAME "Plugin Template"
+#define PLUGIN_PREFIX "[" PLUGIN_NAME "] "
 
 class Plugin : public IServerPluginCallbacks
 {
