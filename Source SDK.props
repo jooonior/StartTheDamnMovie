@@ -3,12 +3,16 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <SOURCE_SDK_2013>$(SOLUTION_DIR)..\source-sdk-2013\</SOURCE_SDK_2013>
+    <HL2_MOD_DIR>$(ProjectDir)mod\</HL2_MOD_DIR>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />
   <ItemGroup>
     <BuildMacro Include="SOURCE_SDK_2013">
       <Value>$(SOURCE_SDK_2013)</Value>
+    </BuildMacro>
+    <BuildMacro Include="HL2_MOD_DIR">
+      <Value>$(HL2_MOD_DIR)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>
