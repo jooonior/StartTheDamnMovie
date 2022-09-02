@@ -3,6 +3,8 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <SOURCE_SDK_2013>$(SOLUTION_DIR)..\source-sdk-2013\</SOURCE_SDK_2013>
+    <HL2_EXE>C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\hl2.exe</HL2_EXE>
+    <HL2_ARGS>-game tf -novid -console -sw -w 800 -h 600</HL2_ARGS>
     <HL2_MOD_DIR>$(ProjectDir)mod\</HL2_MOD_DIR>
   </PropertyGroup>
   <PropertyGroup />
@@ -10,6 +12,12 @@
   <ItemGroup>
     <BuildMacro Include="SOURCE_SDK_2013">
       <Value>$(SOURCE_SDK_2013)</Value>
+    </BuildMacro>
+    <BuildMacro Include="HL2_EXE">
+      <Value>$(HL2_EXE)</Value>
+    </BuildMacro>
+    <BuildMacro Include="HL2_ARGS">
+      <Value>$(HL2_ARGS)</Value>
     </BuildMacro>
     <BuildMacro Include="HL2_MOD_DIR">
       <Value>$(HL2_MOD_DIR)</Value>
