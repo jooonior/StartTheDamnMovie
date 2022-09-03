@@ -7,7 +7,7 @@ Plugin::~Plugin() {}
 
 bool Plugin::Load(CreateInterfaceFn interfaceFactory, CreateInterfaceFn gameServerFactory)
 {
-	ConColorMsg(Color(0, 255, 0, 255), PLUGIN_PREFIX "Plugin loaded.\n");
+	ConColorMsg(Color(0, 255, 0, 255), PLUGIN_PREFIX PLUGIN_DESC " loaded.\n");
 	return true;
 }
 
@@ -17,7 +17,7 @@ void Plugin::Unload(void)
 
 const char *Plugin::GetPluginDescription(void)
 {
-	return PLUGIN_NAME;
+	return PLUGIN_DESC;
 }
 
 void Plugin::Pause(void) {}
