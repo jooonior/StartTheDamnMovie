@@ -1,3 +1,5 @@
+#pragma once
+
 #define CLIENT_DLL
 #include "cbase.h"
 
