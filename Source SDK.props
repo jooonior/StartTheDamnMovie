@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
-    <SOURCE_SDK_2013>$(SOLUTION_DIR)..\source-sdk-2013\</SOURCE_SDK_2013>
+    <SOURCE_SDK_2013>$(SolutionDir)..\source-sdk-2013\</SOURCE_SDK_2013>
     <HL2_EXE>C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\hl2.exe</HL2_EXE>
     <HL2_ARGS>-game tf -novid -console -sw -w 800 -h 600</HL2_ARGS>
     <HL2_MOD_DIR>$(ProjectDir)mod\</HL2_MOD_DIR>
