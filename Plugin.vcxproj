@@ -112,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Plugin.h" />
+    <ClInclude Include="ServerPluginCallbacks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
