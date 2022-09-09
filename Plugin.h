@@ -13,4 +13,30 @@
 
 #define PLUGIN_VERSION "v" STR(PLUGIN_VERSION_MAJOR) "." STR(PLUGIN_VERSION_MINOR) "." STR(PLUGIN_VERSION_PATCH)
 #define PLUGIN_DESC PLUGIN_NAME " " PLUGIN_VERSION
-#define PLUGIN_PREFIX "[" PLUGIN_NAME "] "
+
+
+__forceinline void PluginPrintPrefix()
+{
+	ConColorMsg(Color(0, 153, 153, 255), "[%s] ", PLUGIN_NAME);
+}
+
+template<class... Parameters>
+__forceinline void PluginMsg(const char *fmt, const Parameters&... param)
+{
+	PluginPrintPrefix();
+	Msg(fmt, param...);
+}
+
+template<class... Parameters>
+__forceinline void PluginWarning(const char *fmt, const Parameters&... param)
+{
+	PluginPrintPrefix();
+	Warning(fmt, param...);
+}
+
+template<class... Parameters>
+__forceinline void PluginColorMsg(const Color &color, const char *fmt, Parameters... param)
+{
+	PluginPrintPrefix();
+	ConColorMsg(color, fmt, param...);
+}
