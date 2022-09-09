@@ -12,7 +12,7 @@ Developer Wiki.
 When first opening the project, if Visual Studio prompts to retarget, avoid upgrading
 platform toolset.
 
-Installation specific parameters are defined as user macros in `Source SDK.props`.
+Installation specific parameters are defined as user macros in `Plugin.props`.
 Directory paths in macros must end with a backslash.
 
 Debugging will launch the game with the plugin loaded. Breakpoints and hot reload work
