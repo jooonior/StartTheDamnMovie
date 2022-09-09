@@ -43,9 +43,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <CustomBuildAfterTargets>PostBuildEvent</CustomBuildAfterTargets>
+    <LocalDebuggerCommand>$(HL2_EXE)</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>-insecure -insert_search_path "$(HL2_MOD_DIR)" $(HL2_ARGS)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(HL2_EXE)\..</LocalDebuggerWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <CustomBuildAfterTargets>PostBuildEvent</CustomBuildAfterTargets>
+    <LocalDebuggerCommand>$(HL2_EXE)</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>-insecure -insert_search_path "$(HL2_MOD_DIR)" $(HL2_ARGS)</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(HL2_EXE)\..</LocalDebuggerWorkingDirectory>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -108,16 +116,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LocalDebuggerCommand>$(HL2_EXE)</LocalDebuggerCommand>
-    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArguments>-insecure -insert_search_path "$(HL2_MOD_DIR)" $(HL2_ARGS)</LocalDebuggerCommandArguments>
-    <LocalDebuggerWorkingDirectory>$(HL2_EXE)\..</LocalDebuggerWorkingDirectory>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LocalDebuggerCommand>$(HL2_EXE)</LocalDebuggerCommand>
-    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArguments>-insecure -insert_search_path "$(HL2_MOD_DIR)" $(HL2_ARGS)</LocalDebuggerCommandArguments>
-    <LocalDebuggerWorkingDirectory>$(HL2_EXE)\..</LocalDebuggerWorkingDirectory>
-  </PropertyGroup>
 </Project>
