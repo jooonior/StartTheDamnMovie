@@ -47,6 +47,8 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>-insecure -insert_search_path "$(HL2_MOD_DIR)" $(HL2_ARGS)</LocalDebuggerCommandArguments>
     <LocalDebuggerWorkingDirectory>$(HL2_EXE)\..</LocalDebuggerWorkingDirectory>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <CustomBuildAfterTargets>PostBuildEvent</CustomBuildAfterTargets>
@@ -54,6 +56,8 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>-insecure -insert_search_path "$(HL2_MOD_DIR)" $(HL2_ARGS)</LocalDebuggerCommandArguments>
     <LocalDebuggerWorkingDirectory>$(HL2_EXE)\..</LocalDebuggerWorkingDirectory>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -108,11 +112,11 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Plugin.cpp" />
+    <ClCompile Include="src\Plugin.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Plugin.h" />
-    <ClInclude Include="ServerPluginCallbacks.h" />
+    <ClInclude Include="src\Plugin.h" />
+    <ClInclude Include="src\ServerPluginCallbacks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

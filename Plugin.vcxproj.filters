@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Plugin.cpp">
+    <ClCompile Include="src\Plugin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Plugin.h">
+    <ClInclude Include="src\Plugin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ServerPluginCallbacks.h">
+    <ClInclude Include="src\ServerPluginCallbacks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
