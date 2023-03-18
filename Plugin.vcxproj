@@ -66,6 +66,8 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SOURCE_SDK_2013)mp\src\common;$(SOURCE_SDK_2013)mp\src\game\shared;$(SOURCE_SDK_2013)mp\src\game\client;$(SOURCE_SDK_2013)mp\src\public;$(SOURCE_SDK_2013)mp\src\public\tier0;$(SOURCE_SDK_2013)mp\src\public\tier1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -92,6 +94,8 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SOURCE_SDK_2013)mp\src\common;$(SOURCE_SDK_2013)mp\src\game\shared;$(SOURCE_SDK_2013)mp\src\game\client;$(SOURCE_SDK_2013)mp\src\public;$(SOURCE_SDK_2013)mp\src\public\tier0;$(SOURCE_SDK_2013)mp\src\public\tier1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -113,10 +117,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Plugin.cpp" />
+    <ClCompile Include="src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Plugin.hpp" />
     <ClInclude Include="src\ServerPluginCallbacks.hpp" />
+    <ClInclude Include="src\stdafx.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

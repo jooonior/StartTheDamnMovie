@@ -1,3 +1,5 @@
+#include "stdafx.hpp"
+
 #include "Plugin.hpp"
 
 #include "ServerPluginCallbacks.hpp"
