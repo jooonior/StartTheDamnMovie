@@ -2,6 +2,8 @@
 
 #include "ServerPluginCallbacks.hpp"
 
+#include <tier1/tier1.h>
+
 #define QUOTE(name) #name
 #define STR(macro) QUOTE(macro)
 
@@ -26,14 +28,33 @@ Plugin::~Plugin() {}
 bool Plugin::Load(CreateInterfaceFn interfaceFactory, CreateInterfaceFn gameServerFactory)
 {
 	PluginMsg("Loading version %s\n", PLUGIN_VERSION);
+
+	ConnectTier1Libraries(&interfaceFactory, 1);
+
+	ConVar_Register();
+
 	return true;
 }
 
 void Plugin::Unload(void)
 {
+	ConVar_Unregister();
+
+	DisconnectTier1Libraries();
 }
 
 const char *Plugin::GetPluginDescription(void)
 {
 	return PLUGIN_NAME " v" PLUGIN_VERSION;
+}
+
+CON_COMMAND(greet, "Say hello :)")
+{
+	if (args.ArgC() != 2)
+	{
+		Warning("Usage: greet <name>\n");
+		return;
+	}
+
+	ConMsg("Hello %s!\n", args.Arg(1));
 }
