@@ -20,10 +20,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Plugin.h">
+    <ClInclude Include="src\Plugin.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ServerPluginCallbacks.h">
+    <ClInclude Include="src\ServerPluginCallbacks.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,6 +1,6 @@
-#include "Plugin.h"
+#include "Plugin.hpp"
 
-#include "ServerPluginCallbacks.h"
+#include "ServerPluginCallbacks.hpp"
 
 #define QUOTE(name) #name
 #define STR(macro) QUOTE(macro)
